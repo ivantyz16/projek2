@@ -1,0 +1,267 @@
+body{
+    background-color: #191919;
+}
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    gap: 4rem;
+    /* justify-content: space-between; */
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+/* Sembunyikan checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Gaya untuk ikon hamburger */
+.menu-icon {
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Tampilkan ikon hamburger saat layar kecil */
+@media (max-width: 995px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        display: none;
+        top: 5rem;
+        right: 0;
+        width: 50%;
+        padding: 2rem;
+        background-color: #161616;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+    }
+
+    /* Tampilkan menu saat checkbox dicentang */
+    #menu-toggle:checked + .menu-icon + nav {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 1rem 0;
+        color: white;
+    }
+
+    nav a:hover,
+    nav a.active {
+        color: #b74b4b;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+}
+
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    text-decoration:dashed ;
+}
+
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+.text .img{
+    align-items: center;
+    justify-items: center;
+    max-width: 200px;
+    filter: drop-shadow(15px 10px 15px rgb(218, 231, 232));
+    margin: 45px;
+    
+}
+.organisasi1{
+    text-align: center;
+    margin-top: 50px;
+    align-content: center;
+    border: 4px solid rgb(243, 74, 52);
+    
+}
+.organisasi1 h1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:transparent;
+    -webkit-text-stroke: 2px rgb(245, 66, 66);
+
+}
+.box-kiri .img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.box-kiri h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: transparent;
+    -webkit-text-stroke: .7px  rgb(255, 136, 0)
+}
+.box-kiri p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: blanchedalmond;
+    align-items: center;
+}
+
+.box-tengah img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.box-tengah h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:transparent;
+   -webkit-text-stroke: .7px  rgb(255, 136, 0);
+}
+.box-tengah p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: blanchedalmond;
+    align-items: center;
+}
+
+.box-kanan img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.box-kanan h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: transparent;
+    -webkit-text-stroke: .7px rgb(255, 136, 0);
+}
+.box-kanan p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: blanchedalmond;
+    align-items: center;
+}
+
+.box-kiri,.box-tengah,.box-kanan{
+    width: 339px;
+    height: 399px;
+    background-color: var(--main-color);
+    text-align: center;
+    padding: 20px 20px;
+    margin: 55px 20px 20px 55px;
+    border-radius: 10px;
+    float: left;
+
+
+}
+.box-kiri:hover,.box-tengah:hover,.box-kanan:hover{
+    background-color:rgb(235, 53, 53);
+    color: var(--white-color);
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(216, 31, 31);
+}
+/* Aturan umum tetap sama */
+
+/* Media query untuk layar berukuran sedang (tablet) */
+@media (max-width: 768px) {
+    .box-kiri, .box-tengah, .box-kanan {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+        float: none;
+    }
+    .box {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .organisasi1 {
+        margin-top: 20px;
+    }
+    .organisasi1 .img {
+        max-width: 150px;
+        margin: 20px;
+    }
+}
+
+/* Media query untuk layar kecil (ponsel) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    .box-kiri, .box-tengah, .box-kanan {
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+    }
+    .organisasi1 h1 {
+        font-size: 20px;
+    }
+    .organisasi1 .img {
+        max-width: 100px;
+        margin: 10px;
+    }
+}

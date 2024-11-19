@@ -1,0 +1,331 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #191919;
+}
+
+.logo{
+    font-size: 2rem;
+    color: #b74b4b;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+/* Sembunyikan checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Gaya untuk ikon hamburger */
+.menu-icon {
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-icon {
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.container{
+    margin-top: 4rem;
+}
+
+/* Tampilkan ikon hamburger saat layar kecil */
+@media (max-width: 995px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        display: none;
+        top: 5rem;
+        right: 0;
+        width: 50%;
+        padding: 2rem;
+        background-color: #161616;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        z-index: 1;
+    }
+
+    /* Tampilkan menu saat checkbox dicentang */
+    #menu-toggle:checked + .menu-icon + nav {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 1rem 0;
+        color: white;
+    }
+
+    nav a:hover,
+    nav a.active {
+        color: #b74b4b;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+}
+
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    text-decoration: dashed;
+}
+
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+.container {
+    min-height: 100vh;
+    background: #191919;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Tambahkan padding untuk memberi ruang pada layar kecil */
+}
+
+.container form {
+    width: 670px;
+    max-width: 100%;
+    height: auto; /* Ubah dari fixed height ke auto untuk menyesuaikan konten */
+    display: flex;
+    flex-direction: column; /* Ubah dari row ke column untuk responsif */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgb(247, 42, 42);
+    border-radius: 15px;
+    background: #e22c2c;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+}
+
+.container form h1 {
+    color: white;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem; /* Sesuaikan ukuran font untuk responsif */
+}
+
+.container form input {
+    width: 100%;
+    max-width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    background: none;
+    border-bottom: 2px solid #fff;
+}
+
+.container form input::placeholder {
+    color: #ddd;
+}
+
+.container form h4 {
+    color: #fff;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.6rem;
+}
+
+.container form textarea {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-weight: 200;
+    font-size: 1.5rem;
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    max-width: 600px;
+    height: 80px;
+    resize: none;
+}
+
+textarea::-webkit-scrollbar {
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: rgb(28, 148, 28);
+}
+
+.container form #button {
+    border: none;
+    background: #e24444;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #191919;
+    width: 100px;
+    padding: 10px 0;
+    transition: 0.3s;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.container form #button:hover {
+    opacity: 1;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet Devices (768px and below) */
+@media (max-width: 1024px) {
+    .container form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .container form h1 {
+        font-size: 2rem;
+    }
+
+    .container form h4 {
+        font-size: 1.4rem;
+    }
+
+    .container form input,
+    .container form textarea {
+        max-width: 100%;
+    }
+
+    .container form #button {
+        width: 120px;
+    }
+}
+
+/* Mobile Devices (768px and below) */
+@media (max-width: 768px) {
+    .container form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container form h1 {
+        font-size: 2rem;
+    }
+
+    .container form h4 {
+        font-size: 1.4rem;
+    }
+
+    .container form input,
+    .container form textarea {
+        max-width: 100%;
+    }
+
+    .container form #button {
+        width: 100%;
+        max-width: 200px;
+        align-self: center;
+    }
+}
+
+/* Small Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .container form {
+        padding: 10px;
+    }
+
+    .container form h1 {
+        font-size: 1.8rem;
+    }
+
+    .container form h4 {
+        font-size: 1.2rem;
+    }
+
+    .container form input,
+    .container form textarea {
+        font-size: 1.2rem;
+    }
+
+    .container form #button {
+        width: 100%;
+        max-width: 150px;
+        font-size: 1.4rem;
+    }
+}
+

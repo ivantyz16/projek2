@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200&display=swap');
+
+body{
+    background-color:#191919;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.logo{
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    margin-right: 80px;
+    transition: 0.5s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+    
+/* Sembunyikan checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Gaya untuk ikon hamburger */
+.menu-icon {
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Tampilkan ikon hamburger saat layar kecil */
+@media (max-width: 995px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        display: none;
+        top: 5rem;
+        right: 0;
+        width: 50%;
+        padding: 2rem;
+        background-color: #161616;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+    }
+
+    /* Tampilkan menu saat checkbox dicentang */
+    #menu-toggle:checked + .menu-icon + nav {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 1rem 0;
+        color: white;
+    }
+
+    nav a:hover,
+    nav a.active {
+        color: #b74b4b;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+}
+
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    text-decoration:dashed ;
+}
+
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #b74b4b;
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+.about{
+    width: 100%;
+    padding: 20px;
+    background-color: #191919;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.about img{
+    height: 700px;
+    width: 500px;
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 40px;
+}
+ 
+   
+
+.about-text{
+    width: 550px;
+}
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.huruf{
+    max-width: 600px;
+
+    
+}
+.huruf h1{
+    color: white;
+    font-size: 75px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.huruf h2{
+    color: white;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+span{
+    color: #f9004d;
+}
+.huruf p{
+    color: white;
+    text-decoration:dashed solid var(--white-color);
+    line-height: 1.6;
+}
